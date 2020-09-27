@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class GameManager : Singleton<GameManager> {
     [SerializeField] private Animator fadeAnimator = default;
     [SerializeField] private Text timerText = default;
-    [SerializeField] private float winWaitTime;
+    [SerializeField] private float winWaitTime = 4;
 
     private static readonly int FadeInParam = Animator.StringToHash("FadeIn");
     private static readonly int FadeOutParam = Animator.StringToHash("FadeOut");
@@ -48,6 +48,9 @@ public class GameManager : Singleton<GameManager> {
             }
 
             timerText.text = text;
+
+
+            //ScoreManager.Instance.SetTimerText(text);
         }
     }
 
@@ -146,16 +149,20 @@ public class GameManager : Singleton<GameManager> {
         yield return SceneManager.UnloadSceneAsync("MainLevel");
         yield return SceneManager.LoadSceneAsync("MainLevel", LoadSceneMode.Additive);
         yield return StartCoroutine(FadeIn_CR());
+        _elapsedTime = 0f;
     }
 
     //TODO Debbie added these methods:
     public float GetElapsedTime() {
         //TODO: updated so it returns _elapsedTime
+        //may take out, not nec. working
         //return _elapsedTime;
         return 0;
     }
 
-    public void CueScoreScreen() {
-        SceneManager.LoadSceneAsync("ScoreTestingScene");
+    public void CueScoreScreen()
+    {
+        //ScoreManager.Instance.SetFinalTimerVal(_elapsedTime);
+        SceneManager.LoadSceneAsync("ScoreSummaryScene");
     }
 }
