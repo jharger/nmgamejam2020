@@ -3,8 +3,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class FadeEvents : MonoBehaviour {
-    [SerializeField] private UnityEvent fadeOutFinished;
-    [SerializeField] private UnityEvent fadeInFinished;
+    [SerializeField] private UnityEvent fadeOutFinished = default;
+    [SerializeField] private UnityEvent fadeInFinished = default;
 
     public void FadeOutFinished() {
         fadeOutFinished.Invoke();

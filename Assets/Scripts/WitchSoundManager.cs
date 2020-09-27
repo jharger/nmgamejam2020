@@ -6,10 +6,18 @@ using Random = UnityEngine.Random;
 
 public class WitchSoundManager : Singleton<WitchSoundManager> {
     [FormerlySerializedAs("clips")] [SerializeField]
-    private AudioClip[] snarkClips;
+    private AudioClip[] snarkClips = default;
 
-    [SerializeField] private AudioClip frogClip;
-    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] introClips = default;
+    [SerializeField] private AudioClip frogClip = default;
+    [SerializeField] private AudioSource audioSource = default;
+
+    public void PlayIntroSound() {
+        int clipIndex = Random.Range(0, introClips.Length);
+        var clip = introClips[clipIndex];
+        audioSource.clip = clip;
+        audioSource.Play();
+    }
 
     public void PlaySnark() {
         int clipIndex = Random.Range(0, snarkClips.Length);

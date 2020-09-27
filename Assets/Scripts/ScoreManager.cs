@@ -10,13 +10,13 @@ using UnityEngine.UI;
 
 public class ScoreManager : Singleton<ScoreManager>
 {
-    [SerializeField] private Text scoreText;
+    [SerializeField] private Text scoreText = default;
 
     // Start is called before the first frame update
     void Start()
     {
         //TODO fix up variables, take out 0
-        float timerVal = 0;        
+        float timerVal = 0;
         //timerVal = GameManager.Instance.GetElapsedTime();
         scoreText.text = "Congratulations! \nYou became dinner in: \n" + timerVal + " seconds!";
     }

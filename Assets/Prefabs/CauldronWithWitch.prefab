@@ -4967,6 +4967,9 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 7adefd2ab1607fb4f95b8e8f3c7b68bc, type: 3}
   - {fileID: 8300000, guid: e7661a4bc945dfa4bb08c50d45c66d5d, type: 3}
   - {fileID: 8300000, guid: f31d5714ae58bf54a99703d73ac749d3, type: 3}
+  introClips:
+  - {fileID: 8300000, guid: 7a00b64ad4b95db40be0cc6b29bd2c8b, type: 3}
+  - {fileID: 8300000, guid: f76cda789973bec4eaf221bf2b4bfa56, type: 3}
   frogClip: {fileID: 8300000, guid: 59c93314bcce022498ce32b39d88055c, type: 3}
   audioSource: {fileID: 999548672}
 --- !u!82 &999548672
@@ -5337,6 +5340,19 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &2423229096661643180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8470865016441499164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3e816bd2a7d0cc44b8c60827424cbb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winnerClip: {fileID: 8300000, guid: 370008c4df838d945bdd04039682a6b4, type: 3}
 --- !u!1001 &1785612075386791757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5566,6 +5582,12 @@ GameObject:
 --- !u!4 &6512572748593239361 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 98e386460fc95154794d43fa2c0ae6af,
+    type: 3}
+  m_PrefabInstance: {fileID: 6767774537228972714}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8470865016441499164 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -6312505370339173194, guid: 98e386460fc95154794d43fa2c0ae6af,
     type: 3}
   m_PrefabInstance: {fileID: 6767774537228972714}
   m_PrefabAsset: {fileID: 0}

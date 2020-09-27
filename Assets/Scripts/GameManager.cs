@@ -7,16 +7,18 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager> {
-    [SerializeField] private Animator fadeAnimator;
-    [SerializeField] private Text timerText;
+    [SerializeField] private Animator fadeAnimator = default;
+    [SerializeField] private Text timerText = default;
+    [SerializeField] private float winWaitTime;
 
     private static readonly int FadeInParam = Animator.StringToHash("FadeIn");
     private static readonly int FadeOutParam = Animator.StringToHash("FadeOut");
     private bool _waitingForFadeOut = false;
     private bool _waitingForFadeIn = false;
     private float _elapsedTime;
+    public bool HasStarted { get; private set; }
 
-    private void Awake() {
+    private void Start() {
         StartGame();
     }
 
@@ -27,8 +29,7 @@ public class GameManager : Singleton<GameManager> {
         }
 
         //TODO REMOVE DEBBIE ADDED:
-        if (Input.GetKeyDown(KeyCode.T))
-        {   
+        if (Input.GetKeyDown(KeyCode.T)) {
             CueScoreScreen();
         }
 
@@ -91,7 +92,14 @@ public class GameManager : Singleton<GameManager> {
             yield return SceneManager.LoadSceneAsync("MainLevel", LoadSceneMode.Additive);
         }
 
+        CameraManager.Instance.SetNormalCamera();
+
         yield return StartCoroutine(FadeIn_CR());
+
+        if (!HasStarted) {
+            WitchSoundManager.Instance.PlayIntroSound();
+            HasStarted = true;
+        }
 
         _elapsedTime = 0f;
     }
@@ -109,6 +117,28 @@ public class GameManager : Singleton<GameManager> {
         StartCoroutine(ResetLevel_CR());
     }
 
+    public void WinLevel() {
+        StartCoroutine(WinLevel_CR());
+    }
+
+    private IEnumerator WinLevel_CR() {
+        yield return new WaitForSeconds(0.05f);
+
+        var bodies = GameObject.FindWithTag("Player")
+            .transform.root.GetComponentsInChildren<Rigidbody>();
+        foreach (var body in bodies) {
+            body.collisionDetectionMode = CollisionDetectionMode.Discrete;
+            body.isKinematic = true;
+        }
+
+        CameraManager.Instance.SetWinCamera();
+
+        yield return new WaitForSeconds(winWaitTime);
+
+        yield return StartCoroutine(FadeOut_CR());
+    }
+
+
     private IEnumerator ResetLevel_CR() {
         yield return StartCoroutine(FadeOut_CR());
         var witchSoundManager = WitchSoundManager.Instance;
@@ -119,15 +149,13 @@ public class GameManager : Singleton<GameManager> {
     }
 
     //TODO Debbie added these methods:
-    public float GetElapsedTime()
-    {
+    public float GetElapsedTime() {
         //TODO: updated so it returns _elapsedTime
         //return _elapsedTime;
         return 0;
     }
 
-    public void CueScoreScreen()
-    {
+    public void CueScoreScreen() {
         SceneManager.LoadSceneAsync("ScoreTestingScene");
     }
 }

@@ -5,13 +5,13 @@ using Cinemachine;
 using UnityEngine;
 
 public class SuckyToad : MonoBehaviour {
-    [SerializeField] private LineRenderer tongueRenderer;
-    [SerializeField] private Transform targetPoint;
+    [SerializeField] private LineRenderer tongueRenderer = default;
+    [SerializeField] private Transform targetPoint = default;
     [SerializeField] private float suckSpeed = 2.5f;
     [SerializeField] private float holdTime = 1f;
     [SerializeField] private float resetTime = 2f;
-    [SerializeField] private AudioClip suckSound;
-    [SerializeField] private AudioClip croakSound;
+    [SerializeField] private AudioClip suckSound = default;
+    [SerializeField] private AudioClip croakSound = default;
 
     private Collider _collider;
 

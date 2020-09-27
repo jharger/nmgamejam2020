@@ -19,9 +19,9 @@ public class EyeballController : MonoBehaviour {
 
     [SerializeField] private float groundRayDistance = 1f;
 
-    [SerializeField] private AudioClip[] squishClips;
+    [SerializeField] private AudioClip[] squishClips = default;
 
-    [SerializeField] private AudioSource squishSource;
+    [SerializeField] private AudioSource squishSource = default;
 
     [SerializeField] private float minSquishTime = 0.25f;
     [SerializeField] private float maxSquishTime = 0.5f;
