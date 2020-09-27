@@ -21,7 +21,7 @@ public class ScoreManager : Singleton<ScoreManager>
         //timerVal = 0;
 
         timerVal = GameManager.Instance.GetElapsedTime();
-        scoreText.text = "Congratulations! \n\nYou became dinner in: \n" + timerVal + " seconds!";
+        scoreText.text = "Congratulations! \n\nYou became dinner in: \n" + (int)timerVal + " seconds!";
     }
 
     // Update is called once per frame
