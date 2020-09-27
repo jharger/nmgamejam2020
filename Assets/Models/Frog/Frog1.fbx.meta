@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b27c4fd7984a2a049a5ef8e2e3dd2fe3
+guid: 69c6c81aae5ae3b449ac7b2a4a8c7109
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,23 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Baseboard_mat
-    second: {fileID: 2100000, guid: 894581942d7e3924ead957c48783f157, type: 2}
+      name: Frog_BLeg_Texture
+    second: {fileID: 2100000, guid: 6424a6b771f6ac648903b6bc6373180b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frog_Body_Texture
+    second: {fileID: 2100000, guid: 65e979ccc6e7e9e438c045b8c9323faf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frog_Eye_Texture
+    second: {fileID: 2100000, guid: f94b3d953ac9f3c4a9fc04ac2134470f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Frog_FLeg_Texture
+    second: {fileID: 2100000, guid: d35f2eb8f6a474a44b25258566f5fef0, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -41,7 +56,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -64,7 +79,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
