@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 150, y: 75}
+  m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &6847170604412619777
 CanvasRenderer:
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 7715387609901352935}
   - component: {fileID: 3325737493309950232}
   m_Layer: 5
-  m_Name: Contributions (7)
+  m_Name: JonathonMorrisonContributions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -256,11 +256,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1356461203338115437}
-  m_RootOrder: 5
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -154}
+  m_AnchoredPosition: {x: 180, y: -96}
   m_SizeDelta: {x: 350, y: 20}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &8931399651198980428
@@ -303,7 +303,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Contribution
+  m_Text: 3D Witch Model, Rigging, and Animation
 --- !u!114 &3325737493309950232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -650,11 +650,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1356461203338115437}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -96}
+  m_AnchoredPosition: {x: 180, y: -154}
   m_SizeDelta: {x: 350, y: 20}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &7800112188764841077
@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 1955207939737582591}
   - component: {fileID: 6706111026009484909}
   m_Layer: 5
-  m_Name: Name (7)
+  m_Name: JonathonMorrisonName
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -932,11 +932,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1356461203338115437}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -116}
+  m_AnchoredPosition: {x: 180, y: -58}
   m_SizeDelta: {x: 350, y: 38}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3936069233663603976
@@ -979,7 +979,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '???:'
+  m_Text: 'Jonathon Morrison:'
 --- !u!114 &6706111026009484909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1420,7 +1420,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 04eff736983e7664ebd11a2b7be53760, type: 3}
-    m_FontSize: 32
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -1478,11 +1478,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1356461203338115437}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 180, y: -58}
+  m_AnchoredPosition: {x: 180, y: -116}
   m_SizeDelta: {x: 350, y: 38}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &4832979842761184779
@@ -1761,10 +1761,10 @@ RectTransform:
   m_Children:
   - {fileID: 4426286863670812902}
   - {fileID: 3061926531509767861}
-  - {fileID: 4641370766668771353}
-  - {fileID: 1580728170346454219}
   - {fileID: 4368664040239339712}
   - {fileID: 8917848116142085583}
+  - {fileID: 4641370766668771353}
+  - {fileID: 1580728170346454219}
   - {fileID: 7826150725977927388}
   - {fileID: 5455036347181241674}
   - {fileID: 7617027712823662744}
@@ -3105,7 +3105,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuPanel: {fileID: 5776953298494621592}
   creditsPanel: {fileID: 8969305574886685515}
-  playSceneName: MovementTest
+  playSceneName: ManagementScene
 --- !u!1 &8181304963834312481
 GameObject:
   m_ObjectHideFlags: 0
