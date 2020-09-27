@@ -23,9 +23,12 @@ public class GameManager : Singleton<GameManager> {
     }
 
     private void Update() {
-        // TODO remove
         if (Input.GetKeyDown(KeyCode.R)) {
             RestartLevel();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            QuitGame();
         }
 
         //TODO REMOVE DEBBIE ADDED:
@@ -95,6 +98,9 @@ public class GameManager : Singleton<GameManager> {
             yield return SceneManager.LoadSceneAsync("MainLevel", LoadSceneMode.Additive);
         }
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         CameraManager.Instance.SetNormalCamera();
 
         yield return StartCoroutine(FadeIn_CR());
@@ -120,6 +126,19 @@ public class GameManager : Singleton<GameManager> {
         StartCoroutine(ResetLevel_CR());
     }
 
+    public void QuitGame() {
+        StartCoroutine(QuitGame_CR());
+    }
+
+    public IEnumerator QuitGame_CR() {
+        yield return StartCoroutine(FadeOut_CR());
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        yield return SceneManager.LoadSceneAsync("MainMenu");
+    }
+
     public void WinLevel() {
         StartCoroutine(WinLevel_CR());
     }
@@ -139,6 +158,9 @@ public class GameManager : Singleton<GameManager> {
         yield return new WaitForSeconds(winWaitTime);
 
         yield return StartCoroutine(FadeOut_CR());
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
 

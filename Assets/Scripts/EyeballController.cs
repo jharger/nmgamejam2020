@@ -36,7 +36,6 @@ public class EyeballController : MonoBehaviour {
     private void Awake() {
         _rigidbody = GetComponent<Rigidbody>();
         _jumpBodies = GetComponentsInChildren<Rigidbody>();
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update() {
