@@ -49,12 +49,10 @@ public class GameManager : Singleton<GameManager> {
     }
 
     public void FadeInFinished() {
-        Debug.Log("CALLED FIF");
         waitingForFadeIn = false;
     }
 
     public void FadeOutFinished() {
-        Debug.Log("CALLED FOF");
         waitingForFadeOut = false;
     }
 
