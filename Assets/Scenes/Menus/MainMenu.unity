@@ -10301,11 +10301,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8181304963698079505, guid: 21dd29dae12c3284b97f716d794dff85,
-        type: 3}
-      propertyPath: mainMenuPanel
-      value: 
-      objectReference: {fileID: 1694196319}
     - target: {fileID: 8181304963698079506, guid: 21dd29dae12c3284b97f716d794dff85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10423,12 +10418,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21dd29dae12c3284b97f716d794dff85, type: 3}
---- !u!1 &1694196319 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5776953298494621592, guid: 21dd29dae12c3284b97f716d794dff85,
-    type: 3}
-  m_PrefabInstance: {fileID: 1694196318}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1709070937 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b27c4fd7984a2a049a5ef8e2e3dd2fe3,

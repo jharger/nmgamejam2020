@@ -9,10 +9,14 @@ public class MainMenuManager : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject creditsPanel;
     protected Animator mainMenuAnim;
-    protected AudioSource squishAudioSource;
+    protected AudioSource audioSource;
     // Components end
 
     protected bool transitionInProgress;
+
+    public AudioClip SquishClip;
+    public AudioClip ButtonHoveredClip;
+    public AudioClip ButtonClickedClip;
 
     public string playSceneName;
 
@@ -20,7 +24,7 @@ public class MainMenuManager : MonoBehaviour
     {
         // Set component references
         mainMenuAnim = GetComponent<Animator>();
-        squishAudioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
 
         // Initialize variables
         transitionInProgress = false;
@@ -48,7 +52,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void ToggleCreditsScreen()
     {
-        if(mainMenuPanel)
+        if (mainMenuPanel)
         {
             mainMenuPanel.SetActive(!mainMenuPanel.activeSelf);
 
@@ -99,10 +103,28 @@ public class MainMenuManager : MonoBehaviour
 
     public void PlaySquishSound()
     {
-        if(squishAudioSource)
+        if(audioSource && SquishClip)
         {
-            squishAudioSource.Play();
+            audioSource.clip = SquishClip;
+            audioSource.Play();
         }
     }
 
+    public void PlayButtonClickedSound()
+    {
+        if (audioSource && ButtonClickedClip)
+        {
+            audioSource.clip = ButtonClickedClip;
+            audioSource.Play();
+        }
+    }
+
+    public void PlayButtonHoveredSound()
+    {
+        if (audioSource && ButtonHoveredClip)
+        {
+            audioSource.clip = ButtonHoveredClip;
+            audioSource.Play();
+        }
+    }
 }
