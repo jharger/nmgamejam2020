@@ -26,6 +26,12 @@ public class GameManager : Singleton<GameManager> {
             RestartLevel();
         }
 
+        //TODO REMOVE DEBBIE ADDED:
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            //SCORE SCENE CUE
+        }
+
         _elapsedTime += Time.deltaTime;
         if (timerText) {
             var t = TimeSpan.FromSeconds(_elapsedTime);
@@ -110,5 +116,11 @@ public class GameManager : Singleton<GameManager> {
         yield return SceneManager.UnloadSceneAsync("MainLevel");
         yield return SceneManager.LoadSceneAsync("MainLevel", LoadSceneMode.Additive);
         yield return StartCoroutine(FadeIn_CR());
+    }
+
+    //TODO Debbie added these methods:
+    public float GetElapsedTime()
+    {        
+        return _elapsedTime;
     }
 }
