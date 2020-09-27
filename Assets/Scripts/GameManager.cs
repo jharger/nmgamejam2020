@@ -47,6 +47,9 @@ public class GameManager : Singleton<GameManager> {
             }
 
             timerText.text = text;
+
+            
+            //ScoreManager.Instance.SetTimerText(text);
         }
     }
 
@@ -122,12 +125,14 @@ public class GameManager : Singleton<GameManager> {
     public float GetElapsedTime()
     {
         //TODO: updated so it returns _elapsedTime
+        //may take out, not nec. working
         //return _elapsedTime;
         return 0;
     }
 
     public void CueScoreScreen()
     {
+        //ScoreManager.Instance.SetFinalTimerVal(_elapsedTime);        
         SceneManager.LoadSceneAsync("ScoreSummaryScene");
     }
 }
