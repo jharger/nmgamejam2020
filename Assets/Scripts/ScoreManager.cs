@@ -39,6 +39,11 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         timerText = text;
     }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadSceneAsync("MainMenu");
+    }
 }
 
 
