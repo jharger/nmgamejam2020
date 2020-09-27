@@ -343,7 +343,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 3D Witch Model, Rigging, and Animation
+  m_Text: 3D Witch Model, Rigging, Animation
 --- !u!114 &3325737493309950232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,7 +737,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Music and SFX
+  m_Text: Music, SFX, Script Writing
 --- !u!114 &8624893468159980070
 MonoBehaviour:
   m_ObjectHideFlags: 0
