@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 2725569600317704191}
   m_Layer: 0
   m_Name: Eyeball
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311,9 +311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4e3a559bc7d5d24d99f962935e15570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torqueFactor: 90
+  torqueFactor: 100
   jumpFactor: 6
-  groundForceFactor: 10
+  groundForceFactor: 25
   airForceFactor: 15
   groundRayDistance: 0.235
 --- !u!135 &2725569599923665127
@@ -667,12 +667,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: -6538523599141342293, guid: 5ebe468151eb80744994a922e65dbe74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: -4388680750337458582, guid: 5ebe468151eb80744994a922e65dbe74,
         type: 3}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: -4388680750337458582, guid: 5ebe468151eb80744994a922e65dbe74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 284466305972448831, guid: 5ebe468151eb80744994a922e65dbe74,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -692,6 +702,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Eyeball2
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5ebe468151eb80744994a922e65dbe74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2418937199498563890, guid: 5ebe468151eb80744994a922e65dbe74,
         type: 3}
@@ -714,12 +729,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 3900777791675298176, guid: 5ebe468151eb80744994a922e65dbe74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 6902436232679551134, guid: 5ebe468151eb80744994a922e65dbe74,
         type: 3}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: 2488908585195742037, guid: 0000000000000000d000000000000000,
         type: 0}
+    - target: {fileID: 6902436232679551134, guid: 5ebe468151eb80744994a922e65dbe74,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 7508962101393485627, guid: 5ebe468151eb80744994a922e65dbe74,
         type: 3}
       propertyPath: m_LocalRotation.w

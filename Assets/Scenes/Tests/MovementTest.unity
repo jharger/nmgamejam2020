@@ -5110,7 +5110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1880999435}
-  m_LocalRotation: {x: 0.12218322, y: -0.0000000073947573, z: 9.1033303e-10, w: 0.9925076}
+  m_LocalRotation: {x: 0.12218321, y: 1.325613e-15, z: -2.9951005e-15, w: 0.9925076}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -6191,32 +6191,32 @@ PrefabInstance:
     - target: {fileID: 2725569599923665128, guid: 9fcece025a335324e8cdacc8075a1fe6,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: 0.00000075408946
+      value: -0.000000199585
       objectReference: {fileID: 0}
     - target: {fileID: 2725569599923665128, guid: 9fcece025a335324e8cdacc8075a1fe6,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.000000041404675
+      value: 0.000000041404665
       objectReference: {fileID: 0}
     - target: {fileID: 2725569599923665140, guid: 9fcece025a335324e8cdacc8075a1fe6,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.0000007912131
+      value: 0.00000016246122
       objectReference: {fileID: 0}
     - target: {fileID: 2725569599923665140, guid: 9fcece025a335324e8cdacc8075a1fe6,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.00000003084309
+      value: 0.000000030843104
       objectReference: {fileID: 0}
     - target: {fileID: 2725569599923665142, guid: 9fcece025a335324e8cdacc8075a1fe6,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
-      value: -0.0000004962851
+      value: 0.0000004573892
       objectReference: {fileID: 0}
     - target: {fileID: 2725569599923665142, guid: 9fcece025a335324e8cdacc8075a1fe6,
         type: 3}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.000000040238152
+      value: 0.00000004023834
       objectReference: {fileID: 0}
     - target: {fileID: 2725569600317704177, guid: 9fcece025a335324e8cdacc8075a1fe6,
         type: 3}
@@ -6277,16 +6277,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Eyeball
-      objectReference: {fileID: 0}
-    - target: {fileID: 2725569600317704191, guid: 9fcece025a335324e8cdacc8075a1fe6,
-        type: 3}
-      propertyPath: torqueFactor
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2725569600317704191, guid: 9fcece025a335324e8cdacc8075a1fe6,
-        type: 3}
-      propertyPath: groundForceFactor
-      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9fcece025a335324e8cdacc8075a1fe6, type: 3}

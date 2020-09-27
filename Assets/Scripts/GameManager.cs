@@ -4,14 +4,17 @@ using System.Collections.Generic;
 using GodComplex.Utility;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : Singleton<GameManager> {
-    [SerializeField] private Animator _fadeAnimator;
+    [SerializeField] private Animator fadeAnimator;
+    [SerializeField] private Text timerText;
 
     private static readonly int FadeInParam = Animator.StringToHash("FadeIn");
     private static readonly int FadeOutParam = Animator.StringToHash("FadeOut");
-    private bool waitingForFadeOut = false;
-    private bool waitingForFadeIn = false;
+    private bool _waitingForFadeOut = false;
+    private bool _waitingForFadeIn = false;
+    private float _elapsedTime;
 
     private void Awake() {
         StartGame();
@@ -22,38 +25,55 @@ public class GameManager : Singleton<GameManager> {
         if (Input.GetKeyDown(KeyCode.R)) {
             RestartLevel();
         }
+
+        _elapsedTime += Time.deltaTime;
+        if (timerText) {
+            var t = TimeSpan.FromSeconds(_elapsedTime);
+            var text = string.Empty;
+            if (t.Hours > 0) {
+                text = $"{t.Hours:D2}:{t.Minutes:D2}:{t.Seconds:D2}.{t.Milliseconds / 1000f:F2}";
+            }
+            else if (t.Minutes > 0) {
+                text = $"{t.Minutes:D2}:{t.Seconds:D2}.{t.Milliseconds / 1000f:F2}";
+            }
+            else {
+                text = $"{t.Seconds:D2}{t.Milliseconds / 1000f:F2}";
+            }
+
+            timerText.text = text;
+        }
     }
 
     public void FadeIn() {
-        _fadeAnimator.SetTrigger(FadeInParam);
+        fadeAnimator.SetTrigger(FadeInParam);
     }
 
     public void FadeOut() {
-        _fadeAnimator.SetTrigger(FadeOutParam);
+        fadeAnimator.SetTrigger(FadeOutParam);
     }
 
     public IEnumerator FadeIn_CR() {
-        _fadeAnimator.SetTrigger(FadeInParam);
-        waitingForFadeIn = true;
-        while (waitingForFadeIn) {
+        fadeAnimator.SetTrigger(FadeInParam);
+        _waitingForFadeIn = true;
+        while (_waitingForFadeIn) {
             yield return new WaitForEndOfFrame();
         }
     }
 
     public IEnumerator FadeOut_CR() {
-        _fadeAnimator.SetTrigger(FadeOutParam);
-        waitingForFadeOut = true;
-        while (waitingForFadeOut) {
+        fadeAnimator.SetTrigger(FadeOutParam);
+        _waitingForFadeOut = true;
+        while (_waitingForFadeOut) {
             yield return new WaitForEndOfFrame();
         }
     }
 
     public void FadeInFinished() {
-        waitingForFadeIn = false;
+        _waitingForFadeIn = false;
     }
 
     public void FadeOutFinished() {
-        waitingForFadeOut = false;
+        _waitingForFadeOut = false;
     }
 
     public void StartGame() {
@@ -65,10 +85,19 @@ public class GameManager : Singleton<GameManager> {
             yield return SceneManager.LoadSceneAsync("MovementTest", LoadSceneMode.Additive);
         }
 
-        FadeIn();
+        yield return StartCoroutine(FadeIn_CR());
+
+        _elapsedTime = 0f;
     }
 
     public void RestartLevel() {
+        var bodies = GameObject.FindWithTag("Player")
+            .transform.root.GetComponentsInChildren<Rigidbody>();
+        foreach (var body in bodies) {
+            body.collisionDetectionMode = CollisionDetectionMode.Discrete;
+            body.isKinematic = true;
+        }
+
         StartCoroutine(ResetLevel_CR());
     }
 

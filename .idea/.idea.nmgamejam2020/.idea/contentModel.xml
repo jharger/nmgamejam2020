@@ -11,6 +11,7 @@
           <e p="EyeballController.cs" t="Include" />
           <e p="FadeEvents.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="Killer.cs" t="Include" />
           <e p="Utility" t="Include">
             <e p="Singleton.cs" t="Include" />
           </e>
