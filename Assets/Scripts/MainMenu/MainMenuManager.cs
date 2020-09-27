@@ -5,7 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
+    public AudioSource SquishAudioSource;
+
     public string playSceneName;
+
+    public void Start()
+    {
+        SquishAudioSource = GetComponent<AudioSource>();
+    }
 
     public void PlayGame()
     {
@@ -16,4 +23,15 @@ public class MainMenuManager : MonoBehaviour
     {
         Application.Quit();
     }
+
+    public void PlaySquishSound()
+    {
+        if(SquishAudioSource)
+        {
+            Debug.Log("I am here");
+
+            SquishAudioSource.Play();
+        }
+    }
+
 }
