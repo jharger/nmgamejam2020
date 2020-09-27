@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 9f07c185b9ee09f49855eeab1aea6321
+guid: 58ca0b2fbfcfb8f42a53fcf2c5bee8f4
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Book_Texture.003
-    second: {fileID: 2100000, guid: ee08c9ab202bf8d41954fd060a32899b, type: 2}
+      name: Book_Texture.002
+    second: {fileID: 2100000, guid: f5f61190766279e44b4d0ed5c55b4468, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -41,7 +41,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1

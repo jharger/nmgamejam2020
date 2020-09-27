@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 55e0b0a210c2ef343b3aede0ae69cbc4
+guid: 1690d19045169244eae1e87f10eef7f0
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,13 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Book_Texture.001
-    second: {fileID: 2100000, guid: 7ee40e469ffa90a43bb2fadc40ce0087, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Book_Texture.003
-    second: {fileID: 2100000, guid: 7ee40e469ffa90a43bb2fadc40ce0087, type: 2}
+      name: Sconce_mat
+    second: {fileID: 2100000, guid: d57249b830a87854d8c86f5a9dc7a8a8, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -46,7 +41,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
