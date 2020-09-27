@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
     // Components begin
+    public GameObject mainMenuPanel;
+    public GameObject creditsPanel;
     protected Animator mainMenuAnim;
     protected AudioSource squishAudioSource;
     // Components end
@@ -16,10 +18,11 @@ public class MainMenuManager : MonoBehaviour
 
     public void Start()
     {
+        // Set component references
         mainMenuAnim = GetComponent<Animator>();
-
         squishAudioSource = GetComponent<AudioSource>();
 
+        // Initialize variables
         transitionInProgress = false;
     }
 
@@ -43,7 +46,22 @@ public class MainMenuManager : MonoBehaviour
         StartCoroutine(PlayGameCoroutine());
     }
 
-    private IEnumerator PlayGameCoroutine()
+    public void ToggleCreditsScreen()
+    {
+        if(mainMenuPanel)
+        {
+            mainMenuPanel.SetActive(!mainMenuPanel.activeSelf);
+
+
+            // Set creditsPanel activeSelf to opposite of mainMenuPanel activeSelf
+            if (creditsPanel)
+            {
+                creditsPanel.SetActive(!mainMenuPanel.activeSelf);
+            }
+        }
+    }
+
+    protected IEnumerator PlayGameCoroutine()
     {
         if(mainMenuAnim)
         {
@@ -67,7 +85,7 @@ public class MainMenuManager : MonoBehaviour
         StartCoroutine(QuitGameCoroutine());
     }
 
-    private IEnumerator QuitGameCoroutine()
+    protected IEnumerator QuitGameCoroutine()
     {
         if (mainMenuAnim)
         {
