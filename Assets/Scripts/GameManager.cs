@@ -161,6 +161,8 @@ public class GameManager : Singleton<GameManager> {
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        CueScoreScreen();
     }
 
 
@@ -176,7 +178,7 @@ public class GameManager : Singleton<GameManager> {
 
     //TODO Debbie added these methods:
     public float GetElapsedTime() {
-        return _elapsedTime;        
+        return _elapsedTime;
     }
 
     public void CueScoreScreen()
