@@ -28,8 +28,8 @@ public class GameManager : Singleton<GameManager> {
 
         //TODO REMOVE DEBBIE ADDED:
         if (Input.GetKeyDown(KeyCode.T))
-        {
-            //SCORE SCENE CUE
+        {   
+            CueScoreScreen();
         }
 
         _elapsedTime += Time.deltaTime;
@@ -120,7 +120,14 @@ public class GameManager : Singleton<GameManager> {
 
     //TODO Debbie added these methods:
     public float GetElapsedTime()
-    {        
-        return _elapsedTime;
+    {
+        //TODO: updated so it returns _elapsedTime
+        //return _elapsedTime;
+        return 0;
+    }
+
+    public void CueScoreScreen()
+    {
+        SceneManager.LoadSceneAsync("ScoreTestingScene");
     }
 }
