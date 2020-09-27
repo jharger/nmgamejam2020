@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 public class ScoreManager : Singleton<ScoreManager>
 {
-    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private Text scoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -18,7 +18,7 @@ public class ScoreManager : Singleton<ScoreManager>
         //TODO fix up variables, take out 0
         float timerVal = 0;        
         //timerVal = GameManager.Instance.GetElapsedTime();
-        scoreText.text = "Congrats! You ___________________ in: " + timerVal + " seconds!";
+        scoreText.text = "Congrats! \nYou ___________________ in: \n" + timerVal + " seconds!";
     }
 
     // Update is called once per frame
