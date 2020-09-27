@@ -14,11 +14,13 @@ public class WitchSoundManager : Singleton<WitchSoundManager> {
     public void PlaySnark() {
         int clipIndex = Random.Range(0, snarkClips.Length);
         var clip = snarkClips[clipIndex];
-        audioSource.PlayOneShot(clip);
+        audioSource.clip = clip;
+        audioSource.Play();
     }
 
     public void PlayFrogSound() {
-        audioSource.PlayOneShot(frogClip);
+        audioSource.clip = frogClip;
+        audioSource.Play();
     }
 
     public bool IsPlayingVoice {
