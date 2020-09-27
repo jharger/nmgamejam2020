@@ -31,13 +31,13 @@ public class GameManager : Singleton<GameManager> {
             var t = TimeSpan.FromSeconds(_elapsedTime);
             var text = string.Empty;
             if (t.Hours > 0) {
-                text = $"{t.Hours:D2}:{t.Minutes:D2}:{t.Seconds:D2}.{t.Milliseconds / 1000f:F2}";
+                text = t.ToString(@"hh\:mm\:ss\.ff");
             }
             else if (t.Minutes > 0) {
-                text = $"{t.Minutes:D2}:{t.Seconds:D2}.{t.Milliseconds / 1000f:F2}";
+                text = t.ToString(@"mm\:ss\.ff");
             }
             else {
-                text = $"{t.Seconds:D2}{t.Milliseconds / 1000f:F2}";
+                text = t.ToString(@"ss\.ff");
             }
 
             timerText.text = text;

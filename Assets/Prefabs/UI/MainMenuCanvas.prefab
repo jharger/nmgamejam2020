@@ -180,9 +180,9 @@ GameObject:
   - component: {fileID: 8181304963698079507}
   - component: {fileID: 8181304963698079516}
   - component: {fileID: 8181304963698079517}
-  - component: {fileID: 8181304963698079505}
-  - component: {fileID: 1375130332941871782}
   - component: {fileID: 466714319530716076}
+  - component: {fileID: 1375130332941871782}
+  - component: {fileID: 8181304963698079505}
   m_Layer: 5
   m_Name: MainMenuCanvas
   m_TagString: Untagged
@@ -272,39 +272,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &8181304963698079505
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8181304963698079518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9f203a68f4a84f4f8b9bdf7bb5e8926, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SquishAudioSource: {fileID: 466714319530716076}
-  playSceneName: 
---- !u!95 &1375130332941871782
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8181304963698079518}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 126447716fd20fb48859d0bdaca1750e, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!82 &466714319530716076
 AudioSource:
   m_ObjectHideFlags: 0
@@ -401,6 +368,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &1375130332941871782
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181304963698079518}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 126447716fd20fb48859d0bdaca1750e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8181304963698079505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8181304963698079518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9f203a68f4a84f4f8b9bdf7bb5e8926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SquishAudioSource: {fileID: 466714319530716076}
+  playSceneName: MovementTest
 --- !u!1 &8181304963834312481
 GameObject:
   m_ObjectHideFlags: 0

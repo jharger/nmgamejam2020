@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b27c4fd7984a2a049a5ef8e2e3dd2fe3
+guid: 305fd2e50031699499acfc7acf561f64
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,8 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Baseboard_mat
-    second: {fileID: 2100000, guid: 894581942d7e3924ead957c48783f157, type: 2}
+      name: Plate_texture
+    second: {fileID: 2100000, guid: 046d1bf6ee4d41b47a161e04f8f96557, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -41,7 +41,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
@@ -64,7 +64,7 @@ ModelImporter:
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
-    useFileScale: 0
+    useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
