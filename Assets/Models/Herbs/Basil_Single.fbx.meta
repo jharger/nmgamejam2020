@@ -3,7 +3,17 @@ guid: 517d04f2fe00fb94cb4c1381fc07d24a
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plants_Texture
+    second: {fileID: 2100000, guid: a50cd723a1b943c44b42effc50e567de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rope_Bunched_Texture
+    second: {fileID: 2100000, guid: 9d89eda9b84ef2943bad5e4564df6a57, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
