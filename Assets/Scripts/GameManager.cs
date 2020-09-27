@@ -176,15 +176,12 @@ public class GameManager : Singleton<GameManager> {
 
     //TODO Debbie added these methods:
     public float GetElapsedTime() {
-        //TODO: updated so it returns _elapsedTime
-        //may take out, not nec. working
-        //return _elapsedTime;
-        return 0;
+        return _elapsedTime;        
     }
 
     public void CueScoreScreen()
     {
         //ScoreManager.Instance.SetFinalTimerVal(_elapsedTime);
-        SceneManager.LoadSceneAsync("ScoreSummaryScene");
+        SceneManager.LoadSceneAsync("ScoreSummaryScene", LoadSceneMode.Additive);
     }
 }
