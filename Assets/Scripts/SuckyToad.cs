@@ -11,12 +11,14 @@ public class SuckyToad : MonoBehaviour {
     [SerializeField] private float holdTime = 1f;
     [SerializeField] private float resetTime = 2f;
     [SerializeField] private AudioClip suckSound;
+    [SerializeField] private AudioClip croakSound;
 
     private Collider _collider;
 
     private void Awake() {
         _collider = GetComponent<Collider>();
         tongueRenderer.enabled = false;
+        tongueRenderer.positionCount = 2;
         tongueRenderer.SetPosition(0, tongueRenderer.transform.position);
     }
 
@@ -57,6 +59,8 @@ public class SuckyToad : MonoBehaviour {
 
         eyeballController.UnfreezeEyeball();
         eyeballController.Shoot(targetPoint.forward);
+
+        AudioSource.PlayClipAtPoint(croakSound, tongueRenderer.transform.position);
 
         yield return new WaitForSeconds(resetTime);
 

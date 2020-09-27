@@ -82,7 +82,7 @@ public class GameManager : Singleton<GameManager> {
 
     private IEnumerator StartGame_CR() {
         if (SceneManager.sceneCount < 2) {
-            yield return SceneManager.LoadSceneAsync("MovementTest", LoadSceneMode.Additive);
+            yield return SceneManager.LoadSceneAsync("MainLevel", LoadSceneMode.Additive);
         }
 
         yield return StartCoroutine(FadeIn_CR());
@@ -107,8 +107,8 @@ public class GameManager : Singleton<GameManager> {
         yield return StartCoroutine(FadeOut_CR());
         var witchSoundManager = WitchSoundManager.Instance;
         yield return new WaitUntil((() => !witchSoundManager.IsPlayingVoice));
-        yield return SceneManager.UnloadSceneAsync("MovementTest");
-        yield return SceneManager.LoadSceneAsync("MovementTest", LoadSceneMode.Additive);
+        yield return SceneManager.UnloadSceneAsync("MainLevel");
+        yield return SceneManager.LoadSceneAsync("MainLevel", LoadSceneMode.Additive);
         yield return StartCoroutine(FadeIn_CR());
     }
 }
