@@ -5,32 +5,85 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuManager : MonoBehaviour
 {
-    public AudioSource SquishAudioSource;
+    // Components begin
+    protected Animator mainMenuAnim;
+    protected AudioSource squishAudioSource;
+    // Components end
+
+    protected bool transitionInProgress;
 
     public string playSceneName;
 
     public void Start()
     {
-        SquishAudioSource = GetComponent<AudioSource>();
+        mainMenuAnim = GetComponent<Animator>();
+
+        squishAudioSource = GetComponent<AudioSource>();
+
+        transitionInProgress = false;
+    }
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            QuitGame();
+        }
     }
 
     public void PlayGame()
     {
+        if(transitionInProgress)
+        {
+            return;
+        }
+
+        transitionInProgress = true;
+
+        StartCoroutine(PlayGameCoroutine());
+    }
+
+    private IEnumerator PlayGameCoroutine()
+    {
+        if(mainMenuAnim)
+        {
+            mainMenuAnim.SetTrigger("FadeOutTrigger");
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
         SceneManager.LoadScene(playSceneName);
     }
 
     public void QuitGame()
     {
+        if (transitionInProgress)
+        {
+            return;
+        }
+
+        transitionInProgress = true;
+
+        StartCoroutine(QuitGameCoroutine());
+    }
+
+    private IEnumerator QuitGameCoroutine()
+    {
+        if (mainMenuAnim)
+        {
+            mainMenuAnim.SetTrigger("FadeOutTrigger");
+        }
+
+        yield return new WaitForSeconds(1.0f);
+
         Application.Quit();
     }
 
     public void PlaySquishSound()
     {
-        if(SquishAudioSource)
+        if(squishAudioSource)
         {
-            Debug.Log("I am here");
-
-            SquishAudioSource.Play();
+            squishAudioSource.Play();
         }
     }
 

@@ -16,3 +16,7 @@ Fire Sounds from various sources. Take your pick; I wasn't sure which would be b
 `fire1.wav`
 `fire2.wav`
 `fire3.wav`
+
+vox_clips contains one-liners from Hannah
+
+The toad samples are from [Wikimedia](https://commons.wikimedia.org/w/index.php?title=File%3AAtelopus_franciscus_male_territorial_call_-_pone.0022080.s002.oga), and are under the CCA 2.5 License.
