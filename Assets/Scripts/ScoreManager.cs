@@ -19,8 +19,9 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         //TODO fix up variables, take out 0
         //timerVal = 0;
-        //timerVal = GameManager.Instance.GetElapsedTime();
-        scoreText.text = "Congratulations! \n\nYou became dinner in: \n" + timerText + " seconds!";
+
+        timerVal = GameManager.Instance.GetElapsedTime();
+        scoreText.text = "Congratulations! \n\nYou became dinner in: \n" + timerVal + " seconds!";
     }
 
     // Update is called once per frame
@@ -33,7 +34,6 @@ public class ScoreManager : Singleton<ScoreManager>
     {
         this.timerVal = timerVal;
     }
-
 
     public void SetTimerText(String text)
     {
