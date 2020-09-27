@@ -91,6 +91,8 @@ public class GameManager : Singleton<GameManager> {
     }
 
     public void RestartLevel() {
+        WitchSoundManager.Instance.PlaySnark();
+
         var bodies = GameObject.FindWithTag("Player")
             .transform.root.GetComponentsInChildren<Rigidbody>();
         foreach (var body in bodies) {
@@ -103,6 +105,8 @@ public class GameManager : Singleton<GameManager> {
 
     private IEnumerator ResetLevel_CR() {
         yield return StartCoroutine(FadeOut_CR());
+        var witchSoundManager = WitchSoundManager.Instance;
+        yield return new WaitUntil((() => !witchSoundManager.IsPlayingVoice));
         yield return SceneManager.UnloadSceneAsync("MovementTest");
         yield return SceneManager.LoadSceneAsync("MovementTest", LoadSceneMode.Additive);
         yield return StartCoroutine(FadeIn_CR());
