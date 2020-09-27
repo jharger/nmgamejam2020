@@ -18,5 +18,16 @@ Fire Sounds from various sources. Take your pick; I wasn't sure which would be b
 `fire3.wav`
 
 vox_clips contains one-liners from Hannah
+`vox_clips`
 
-The toad samples are from [Wikimedia](https://commons.wikimedia.org/w/index.php?title=File%3AAtelopus_franciscus_male_territorial_call_-_pone.0022080.s002.oga), and are under the CCA 2.5 License.
+the toad sample I synthesized in Sunvox
+`toad_croak.wav`
+
+the sound of water on an electric stove
+`potion_sizzle.wav`
+
+eyeball gore sounds
+`squishes/`
+
+some apt music
+`creepy_song.wav`
