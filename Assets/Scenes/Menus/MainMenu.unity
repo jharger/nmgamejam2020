@@ -498,6 +498,46 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 126447716fd20fb48859d0bdaca1750e, type: 2}
+    - target: {fileID: 2548226168688005198, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548226168688005198, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548226168688005198, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2548226168688005198, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133281768345671644, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133281768345671644, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133281768345671644, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3133281768345671644, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8181304963698079505, guid: 21dd29dae12c3284b97f716d794dff85,
         type: 3}
       propertyPath: mainMenuPanel
