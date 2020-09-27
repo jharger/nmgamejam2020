@@ -121,6 +121,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &985673049 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5776953298494621592, guid: 21dd29dae12c3284b97f716d794dff85,
+    type: 3}
+  m_PrefabInstance: {fileID: 8181304964983264635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1249440954
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,7 +214,7 @@ Transform:
   m_GameObject: {fileID: 1249440954}
   m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
   m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0.99999994}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -360,6 +366,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 126447716fd20fb48859d0bdaca1750e, type: 2}
+    - target: {fileID: 8181304963698079505, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: mainMenuPanel
+      value: 
+      objectReference: {fileID: 985673049}
     - target: {fileID: 8181304963698079506, guid: 21dd29dae12c3284b97f716d794dff85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -469,6 +480,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MainMenuCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8969305574886685515, guid: 21dd29dae12c3284b97f716d794dff85,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21dd29dae12c3284b97f716d794dff85, type: 3}
