@@ -31,3 +31,5 @@ eyeball gore sounds
 
 some apt music
 `creepy_song.wav`
+`creepy_win_Seq01.wav` intro to win theme
+`creepy_win_Seq02.wav` looping second part of win theme
