@@ -475,7 +475,7 @@ GameObject:
   - component: {fileID: 1560580343}
   - component: {fileID: 1560580342}
   m_Layer: 0
-  m_Name: creepy_win_Seq01
+  m_Name: creepy_win_Seq02
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -491,7 +491,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 8d5d7f28b355f6a4690890432311c318, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d345ae9c7cd0927498b1efbe3a6dcf6d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
