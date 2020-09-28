@@ -28,6 +28,9 @@ public class MainMenuManager : MonoBehaviour
 
         // Initialize variables
         transitionInProgress = false;
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void Update()
