@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager> {
     private bool _waitingForFadeOut = false;
     private bool _waitingForFadeIn = false;
     private float _elapsedTime;
+    private bool _hasWon;
     public bool HasStarted { get; private set; }
 
     private void Start() {
@@ -28,12 +29,14 @@ public class GameManager : Singleton<GameManager> {
             RestartLevel();
         }
 
-        //TODO REMOVE DEBBIE ADDED:
-        if (Input.GetKeyDown(KeyCode.T)) {
+        // Cheat to instantly win
+        /*if (Input.GetKeyDown(KeyCode.T)) {
             CueScoreScreen();
-        }
+        }*/
 
-        _elapsedTime += Time.deltaTime;
+        if (_hasWon == false) {
+            _elapsedTime += Time.deltaTime;
+        }
         if (timerText) {
             var t = TimeSpan.FromSeconds(_elapsedTime);
             var text = string.Empty;
@@ -108,6 +111,7 @@ public class GameManager : Singleton<GameManager> {
         }
 
         _elapsedTime = 0f;
+        _hasWon = false;
     }
 
     public void RestartLevel() {
@@ -128,6 +132,8 @@ public class GameManager : Singleton<GameManager> {
     }
 
     private IEnumerator WinLevel_CR() {
+        _hasWon = true;
+
         yield return new WaitForSeconds(0.05f);
 
         var bodies = GameObject.FindWithTag("Player")
@@ -142,6 +148,8 @@ public class GameManager : Singleton<GameManager> {
         yield return new WaitForSeconds(winWaitTime);
 
         yield return StartCoroutine(FadeOut_CR());
+
+        CueScoreScreen();
     }
 
 
@@ -151,8 +159,9 @@ public class GameManager : Singleton<GameManager> {
         yield return new WaitUntil((() => !witchSoundManager.IsPlayingVoice));
         yield return SceneManager.UnloadSceneAsync("MainLevel");
         yield return SceneManager.LoadSceneAsync("MainLevel", LoadSceneMode.Additive);
-        yield return StartCoroutine(FadeIn_CR());
         _elapsedTime = 0f;
+        _hasWon = false;
+        yield return StartCoroutine(FadeIn_CR());
     }
 
     //TODO Debbie added these methods:
