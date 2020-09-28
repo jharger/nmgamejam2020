@@ -99,6 +99,9 @@ public class GameManager : Singleton<GameManager> {
             yield return SceneManager.LoadSceneAsync("MainLevel", LoadSceneMode.Additive);
         }
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
         CameraManager.Instance.SetNormalCamera();
 
         yield return StartCoroutine(FadeIn_CR());
@@ -175,7 +178,7 @@ public class GameManager : Singleton<GameManager> {
 
     public void CueScoreScreen()
     {
-        //ScoreManager.Instance.SetFinalTimerVal(_elapsedTime);
+        SceneManager.UnloadSceneAsync("MainLevel");
         SceneManager.LoadSceneAsync("ScoreSummaryScene", LoadSceneMode.Additive);
     }
 }
