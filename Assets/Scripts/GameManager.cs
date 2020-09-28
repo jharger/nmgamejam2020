@@ -33,6 +33,10 @@ public class GameManager : Singleton<GameManager> {
             CueScoreScreen();
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            QuitGame();
+        }
+
         _elapsedTime += Time.deltaTime;
         if (timerText) {
             var t = TimeSpan.FromSeconds(_elapsedTime);
@@ -141,6 +145,18 @@ public class GameManager : Singleton<GameManager> {
         yield return StartCoroutine(FadeOut_CR());
     }
 
+    public void QuitGame() {
+        StartCoroutine(QuitGame_CR());
+    }
+
+    public IEnumerator QuitGame_CR() {
+        yield return StartCoroutine(FadeOut_CR());
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        yield return SceneManager.LoadSceneAsync("MainMenu");
+    }
 
     private IEnumerator ResetLevel_CR() {
         yield return StartCoroutine(FadeOut_CR());
@@ -154,7 +170,7 @@ public class GameManager : Singleton<GameManager> {
 
     //TODO Debbie added these methods:
     public float GetElapsedTime() {
-        return _elapsedTime;        
+        return _elapsedTime;
     }
 
     public void CueScoreScreen()
